@@ -1,0 +1,71 @@
+[
+ {
+  "name": "g-d9",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 9,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   7000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1400,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "g-mlp5",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 8,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.2,
+   "mlp_mult": 5
+  },
+  "args": [
+   "--steps",
+   7000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1400,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ }
+]

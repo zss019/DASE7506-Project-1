@@ -1,0 +1,140 @@
+[
+ {
+  "name": "g-do0.15",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 8,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.15
+  },
+  "args": [
+   "--steps",
+   7000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1400,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "g-do0.25",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 8,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.25
+  },
+  "args": [
+   "--steps",
+   7000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1400,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "g-wd0.2",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 8,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   7000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1400,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--weight-decay",
+   0.2
+  ]
+ },
+ {
+  "name": "g-9k",
+  "config": {
+   "vocab": 2048,
+   "width": 256,
+   "heads": 4,
+   "depth": 8,
+   "context": 256,
+   "norm": "rms",
+   "pos": "rope",
+   "mlp": "gelu",
+   "bias": false,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   9000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1800,
+   "--ema",
+   0.9995,
+   "--min-lr-ratio",
+   0.02,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ }
+]
