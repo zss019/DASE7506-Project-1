@@ -1,0 +1,135 @@
+[
+ {
+  "name": "bs64-do0.25",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.25
+  },
+  "args": [
+   "--steps",
+   10000,
+   "--batch-size",
+   64,
+   "--lr",
+   0.003,
+   "--eval-every",
+   2000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "bs64-do0.2-14k",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   14000,
+   "--batch-size",
+   64,
+   "--lr",
+   0.003,
+   "--eval-every",
+   2800,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "bs64-do0.2-layernorm",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2,
+   "norm": "layer"
+  },
+  "args": [
+   "--steps",
+   10000,
+   "--batch-size",
+   64,
+   "--lr",
+   0.003,
+   "--eval-every",
+   2000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "bs64-do0.2-ema9995-floor0.02",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   10000,
+   "--batch-size",
+   64,
+   "--lr",
+   0.003,
+   "--eval-every",
+   2000,
+   "--ema",
+   0.9995,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--min-lr-ratio",
+   0.02
+  ]
+ },
+ {
+  "name": "bs128-do0.2-lr4e-3-5k",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   5000,
+   "--batch-size",
+   128,
+   "--lr",
+   0.004,
+   "--eval-every",
+   1000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17
+  ]
+ }
+]

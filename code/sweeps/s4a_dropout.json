@@ -1,0 +1,68 @@
+[
+ {
+  "name": "w256d6-do0.0",
+  "config": {
+   "width": 256,
+   "depth": 6,
+   "heads": 4,
+   "dropout": 0.0
+  },
+  "args": [
+   "--steps",
+   6000,
+   "--eval-every",
+   1000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   200,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "w256d6-do0.1",
+  "config": {
+   "width": 256,
+   "depth": 6,
+   "heads": 4,
+   "dropout": 0.1
+  },
+  "args": [
+   "--steps",
+   6000,
+   "--eval-every",
+   1000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   200,
+   "--seed",
+   17
+  ]
+ },
+ {
+  "name": "w256d6-do0.2",
+  "config": {
+   "width": 256,
+   "depth": 6,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   6000,
+   "--eval-every",
+   1000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   200,
+   "--seed",
+   17
+  ]
+ }
+]

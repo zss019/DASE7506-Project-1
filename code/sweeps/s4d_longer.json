@@ -1,0 +1,100 @@
+[
+ {
+  "name": "w256d8-do0.2-lr2e-3-20k",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   20000,
+   "--eval-every",
+   4000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--lr",
+   0.002
+  ]
+ },
+ {
+  "name": "w256d8-do0.15-lr2e-3-20k",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.15
+  },
+  "args": [
+   "--steps",
+   20000,
+   "--eval-every",
+   4000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--lr",
+   0.002
+  ]
+ },
+ {
+  "name": "w256d8-do0.2-lr3e-3",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   10000,
+   "--eval-every",
+   2000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--lr",
+   0.003
+  ]
+ },
+ {
+  "name": "w256d8-do0.2-lr3e-3-bs64",
+  "config": {
+   "width": 256,
+   "depth": 8,
+   "heads": 4,
+   "dropout": 0.2
+  },
+  "args": [
+   "--steps",
+   10000,
+   "--eval-every",
+   2000,
+   "--ema",
+   0.999,
+   "--wd-exclude-1d",
+   "--warmup",
+   300,
+   "--seed",
+   17,
+   "--lr",
+   0.003,
+   "--batch-size",
+   64
+  ]
+ }
+]
