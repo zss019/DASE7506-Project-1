@@ -1,6 +1,14 @@
 # MP1 code — installation and usage
 
-Read [the project guide](../guide/GUIDE.md) for the assignment, assessment, deadlines and peer review. This README contains the running instructions and technical rules. The package has only these two documents.
+Read [the project guide](../GUIDE.md) for the assignment, assessment, deadlines and peer review, and the [repository README](../README.md) for **this submission’s score, install, train and evaluate commands, resource measurements, and AI disclosure**. This file keeps the classroom protocol.
+
+**Submitted full-test FP32 BPB: 1.48544.** Frozen config: `configs/final_v3.json`. Evaluate without retraining:
+
+```bash
+python evaluate.py --checkpoint /path/to/checkpoint.pt --device cpu --precision fp32 --split test --threads 4
+```
+
+Checkpoint SHA-256: `de648427b2ca17472beafc9d4bfae69772eb52adae1f6824d29fb60464dfd032`.
 
 All commands below run from **code/**. Data and the tokenizer are included. No API key, pretrained weights or additional dataset download is needed; after installing dependencies, training and evaluation work offline.
 
@@ -58,6 +66,16 @@ python evaluate.py --checkpoint runs/baseline/checkpoint.pt --device cpu --preci
 
 The baseline has four GPT blocks, width 128, four attention heads and **1,088,256 parameters**, and achieves approximately **2.10 test BPB**. On the reference four-thread Xeon Platinum 8457C, measured training took about **311 seconds** and scoring **5.92 seconds**, excluding installation and loading. These are reference measurements, not laptop guarantees or a fixed time allowance.
 
+**Submitted model** — architecture `configs/final_v3.json`, then freeze before test:
+
+```bash
+python train.py --implementation student --config configs/final_v3.json --device cuda --compile \
+  --seed 17 --steps 7000 --batch-size 128 --lr 0.004 --warmup 300 --min-lr-ratio 0.02 \
+  --weight-decay 0.3 --wd-exclude-1d --ema 0.9995 --eval-every 1400 --run-dir runs/final-v3
+python evaluate.py --checkpoint runs/final-v3/checkpoint.pt --split validation
+python evaluate.py --checkpoint runs/final-v3/checkpoint.pt --device cpu --precision fp32 --split test
+```
+
 **Your model** — edit `student.py` and supporting files, then:
 
 ```bash
@@ -100,9 +118,9 @@ Use validation for all development and checkpoint/mixture selection. Weights, st
 
 Measure all three limits for the same frozen predictor:
 
-- **CPU time ≤5× baseline:**
-- **Peak RAM ≤4 GiB:**
-- **Inference assets ≤64 MiB uncompressed:** 
+- **CPU time ≤5× baseline:** this submission about 3.4–4.1× on the development CPU (load-dependent).
+- **Peak RAM ≤4 GiB:** 2.10 GiB RSS for the submitted checkpoint.
+- **Inference assets ≤64 MiB uncompressed:** 26.0 MiB checkpoint file. 
 
 ## 5. Prepare your submission and reproduce a peer
 

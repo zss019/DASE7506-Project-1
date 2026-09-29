@@ -1,0 +1,21 @@
+{
+  "protocol": "7506-mp1-wt2-v2",
+  "implementation": "student",
+  "reported_test_bpb": 1.48544,
+  "evaluator_bpb": 1.485441599903059,
+  "checkpoint_sha256": "de648427b2ca17472beafc9d4bfae69772eb52adae1f6824d29fb60464dfd032",
+  "size_bytes": 27299317,
+  "config": {
+    "vocab": 2048,
+    "width": 256,
+    "heads": 4,
+    "depth": 8,
+    "context": 256,
+    "norm": "rms",
+    "pos": "rope",
+    "mlp": "gelu",
+    "bias": false,
+    "dropout": 0.2
+  },
+  "evaluate": "python evaluate.py --checkpoint checkpoint.pt --device cpu --precision fp32 --split test --threads 4"
+}

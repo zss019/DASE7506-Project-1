@@ -1,0 +1,6 @@
+# Local virtualenv and weights — keep checkpoints out of git; publish them as a Release asset.
+.venv/
+checkpoint-bundle/checkpoint.pt
+*.pt
+*.zip
+.DS_Store
