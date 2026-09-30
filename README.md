@@ -21,6 +21,8 @@ The leaderboard shows five decimal places. Submit **1.48544**. The JSON value is
 Code repository: https://github.com/zss019/DASE7506-Project-1  
 Score issue: https://github.com/xudongwu-0/xudongwu-0.github.io/issues/107
 
+**Report (≤10 pages):** [`report/MP1_report.pdf`](report/MP1_report.pdf) (source [`report/MP1_report.md`](report/MP1_report.md)). Method, matched-token comparison, ablation, and critical analysis as required by the guide.
+
 ## 1. Install
 
 Python **3.12**. From this repository:

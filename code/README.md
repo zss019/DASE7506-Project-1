@@ -124,10 +124,10 @@ Measure all three limits for the same frozen predictor:
 
 ## 5. Prepare your submission and reproduce a peer
 
-The [guide](../guide/GUIDE.md) specifies the deadline and website workflow. Include the following in your immutable code repository:
+The [guide](../GUIDE.md) specifies the deadline and website workflow. This repository includes:
 
-- **Report, at most 10 pages including figures, tables and references** 
-- **Reproduction instructions**
+- **Report:** [`../report/MP1_report.pdf`](../report/MP1_report.pdf) (at most 10 pages: method, comparisons, ablation, critical analysis)
+- **Reproduction instructions:** this file and [`../README.md`](../README.md)
 
 Your final website submission must link to this code and the matching complete checkpoint bundle. The website generates the Issue JSON automatically. Keep all inference assets downloadable for verification.
 
