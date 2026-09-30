@@ -126,7 +126,7 @@ Measure all three limits for the same frozen predictor:
 
 The [guide](../GUIDE.md) specifies the deadline and website workflow. This repository includes:
 
-- **Report:** [`../report/MP1_report.pdf`](../report/MP1_report.pdf) (at most 10 pages: method, comparisons, ablation, critical analysis)
+- **Report:** [`../report/MP1_report.pdf`](../report/MP1_report.pdf) (LaTeX: [`../report/MP1_report.tex`](../report/MP1_report.tex); at most 10 pages: method, comparisons, ablation, critical analysis)
 - **Reproduction instructions:** this file and [`../README.md`](../README.md)
 
 Your final website submission must link to this code and the matching complete checkpoint bundle. The website generates the Issue JSON automatically. Keep all inference assets downloadable for verification.

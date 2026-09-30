@@ -19,9 +19,10 @@ Individual submission. Protocol `7506-mp1-wt2-v2`. All commands below run from `
 The leaderboard shows five decimal places. Submit **1.48544**. The JSON value is the exact output of the supplied `evaluate.py` on the frozen checkpoint, CPU, FP32, full test split.
 
 Code repository: https://github.com/zss019/DASE7506-Project-1  
+Immutable code snapshot: https://github.com/zss019/DASE7506-Project-1/tree/mp1-final  
 Score issue: https://github.com/xudongwu-0/xudongwu-0.github.io/issues/107
 
-**Report (≤10 pages):** [`report/MP1_report.pdf`](report/MP1_report.pdf) (source [`report/MP1_report.md`](report/MP1_report.md)). Method, matched-token comparison, ablation, and critical analysis as required by the guide.
+**Report (≤10 pages):** [`report/MP1_report.pdf`](report/MP1_report.pdf) (LaTeX source [`report/MP1_report.tex`](report/MP1_report.tex)). Method, matched-token comparison, ablation, and critical analysis as required by the guide.
 
 ## 1. Install
 
@@ -136,11 +137,11 @@ Settings were chosen on **validation** only. The test split was scored after eac
 
 All development training used one NVIDIA GeForce RTX 3080 Ti (12 GiB). Search included architecture ablations, size/dropout/LR sweeps, GELU vs SwiGLU, and weight-decay confirmation across seeds 17/18/19. Cumulative GPU training time is on the order of **8 GPU-hours** of wall-clock job time (many runs overlapped on one GPU). CPU time was used for the official baseline, timing, and all ranked evaluations.
 
-A 10-page report (method, matched-token comparison, ablation, and cost/quality trade-offs) will sit in this repository for the 30 September final submission.
+The ≤10-page report is [`report/MP1_report.pdf`](report/MP1_report.pdf).
 
 ## 8. AI assistance
 
-Substantive help came from **Cursor Grok 4.6** (and earlier turns of the same coding agent) for reading the starter, implementing `student.py` / training flags, running sweeps, measuring the budget, and drafting this README. The submitted predictor, commands, hashes, and scores were executed locally with the supplied evaluator. I take responsibility for the implementation and the reported BPB.
+Substantive help came from **Cursor Grok 4.6** (and earlier turns of the same coding agent) for reading the starter, implementing `student.py` / training flags, running sweeps, measuring the budget, and drafting this README and the report. The submitted predictor, commands, hashes, and scores were executed locally with the supplied evaluator. I take responsibility for the implementation and the reported BPB.
 
 Reused work: the starter GPT, trainer, scorer, WikiText-2 splits, and BPE-2048 tokenizer from the course package; RMSNorm / RoPE / residual scaling follow standard GPT-2 / Llama-style practice rather than a copied third-party checkpoint.
 
