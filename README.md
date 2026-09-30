@@ -22,7 +22,7 @@ Code repository: https://github.com/zss019/DASE7506-Project-1
 Immutable code snapshot: https://github.com/zss019/DASE7506-Project-1/tree/mp1-final  
 Score issue: https://github.com/xudongwu-0/xudongwu-0.github.io/issues/107
 
-**Report (≤10 pages):** [`report/MP1_report.pdf`](report/MP1_report.pdf) (LaTeX source [`report/MP1_report.tex`](report/MP1_report.tex)). Method, matched-token comparison, ablation, and critical analysis as required by the guide.
+**Report (≤10 pages):** [`report/MP1_report.pdf`](report/MP1_report.pdf). Method, matched-token comparison, ablation, and critical analysis as required by the guide.
 
 ## 1. Install
 
